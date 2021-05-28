@@ -20,14 +20,22 @@ body,
 html {
   margin: 0;
   background-color: black;
-  background-size: contain;
-  background-attachment: fixed;
 }
 
 .container-top {
   background-image: url(./imgs/pexels-philip-ackermann-878151.jpg);
-  background-size: cover;
+  background-size: 100%;
+  background-position: center;
   height: 100vh;
+  animation: webbg 23s linear;
+}
+@keyframes webbg {
+  0%{
+    background-size:100% ;
+  }
+  100%{
+    background-size: 125%;
+  }
 }
 
 .logo {
@@ -115,27 +123,38 @@ a.b:hover:after {
   font-family: 'Monument';
   font-weight: normal;
   font-weight: 700;
-  animation: 1s slide-text ease-out;
   margin:0;
   color: azure;
+  animation: 1s slide-text ease-out;
 }
+.face-down{
+  animation:1s slide-text ease-in-out;
+}
+
 @keyframes slide-text {
   0%{
-    margin-top: 3rem;
+    margin-top: 4rem;
   }100%{
     margin-bottom: inherit;
   }
 }
-@keyframes slide-text {
-  0%{
-    margin-top:60px;
-    overflow: hidden;
-  }
-  100%{
-    margin-top: 0;
-    overflow: hidden;
-  }
+/* .thea{
+  height: 68px;
+  overflow: hidden;
+  animation: 1s slide-text ease-out;
 }
+.sed{
+  height: 68px;
+  overflow: hidden;
+  animation: 1s slide-text ease-out;
+  animation-delay: .5s;
+}
+.down{
+  height: 68px;
+  overflow: hidden;
+  animation: 1s slide-text ease-out;
+  animation-delay: 1s;
+} */
 .circles {
   position: absolute;
   transform: rotateZ(2deg);

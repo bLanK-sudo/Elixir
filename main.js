@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function showPage() {
     const hid = document.querySelectorAll('.hid')
     const about = document.querySelector('.a')
     const contact = document.querySelector('.b')
